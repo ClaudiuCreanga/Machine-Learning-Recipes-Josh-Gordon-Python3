@@ -1,3 +1,5 @@
+# Part 2 - Visualizing a Decision Tree - https://youtu.be/tNa99PG8hR8
+
 import numpy as np
 from sklearn.datasets import load_iris
 from sklearn import tree
