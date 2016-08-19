@@ -18,11 +18,12 @@ class ScrappyKNN():
         return predictions
 
     def closest(self, row):
-        best_dist = euc(row, self.X_train[0])
-        best_index = 0
-        for i in range(1, len(self.X_train)):
+        # Distance from test point to first training point
+        best_dist = euc(row, self.X_train[0]) # Get the first one
+        best_index = 0 #index
+        for i in range(1, len(self.X_train)): # Iterate over all other training points
             dist = euc(row, self.X_train[i])
-            if dist < best_dist:
+            if dist < best_dist: # Found closer, update
                 best_dist = dist
                 best_index = i
         return self.y_train[best_index]
